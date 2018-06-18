@@ -1,0 +1,41 @@
+<h1>para</h1>
+<div>
+<!-- <form name="f1">
+    <input type="text" name ="T1" class="form-group" placeholder="Email" ng-model="email"><br/>
+    <span style="color:red" ng-show="f1.T1.$dirty &&f1.T1.$invalid">
+    <span ng-show="f1.T1.$error.required">email is required.</span></span>
+
+    <input type="text"   name ="T2"class="form-group" placeholder="Password" ng-model="pwd"><br/>
+    <span style="color:red" ng-show="f1.T2.$dirty && f1.T2.$invalid">
+    <span ng-show="f1.T2.$error.required">password is required.</span></span>
+
+   
+    <input type="submit" name ="B1"
+  ng-disabled="f1.T1.$dirty &&f1.T1$invalid ||  
+f1.T2.$dirty && f1.T2.$invalid">
+</form> -->
+
+<form ng-controller="validateCtrl" name="myform" novalidate>
+
+<p>Username:<br>
+<input type="text" name="user" ng-model="user" required>
+<span style="color:red" ng-show="myform.user.$dirty && myform.user.$invalid">
+<span ng-show="myform.user.$error.required">Username is required.</span>
+</span>
+</p>
+
+<p>Email:<br>
+<input type="email" name="email" ng-model="email" required>
+<span style="color:red" ng-show="myform.email.$dirty && myform.email.$invalid">
+<span ng-show="myform.email.$error.required">email is required.</span>
+</span>
+</p>
+
+<p>
+<input type="submit">
+</p>
+
+</form>
+
+</body>
+</html>
